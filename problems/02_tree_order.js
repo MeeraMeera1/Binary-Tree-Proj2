@@ -19,3 +19,13 @@ function inOrderArray(root) {
   ];
   return array;
 }
+
+function postOrderArray(root) {
+  if (!root) return [];
+  let array = [
+    ...postOrderArray(root.left),
+    ...postOrderArray(root.right),
+    root.val,
+  ];
+  return array;
+}
